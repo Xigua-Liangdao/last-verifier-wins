@@ -1,12 +1,10 @@
-# Anonymous Supplementary Materials
+# Last Verifier Wins
 
-## Project
+Code and experiment artifacts for a sequential RLVR study on `meta-llama/Llama-3.1-8B`, comparing multi-task SFT, IF-RLVR, GSM8K GRPO, a cold-start GRPO control, and a reverse-order math->IF pipeline.
 
-This directory is a cleaned supplementary-materials bundle for anonymous review. It keeps only the final code paths, the main ablation scripts cited in the write-up, the five 8B evaluation artifacts discussed in the report, and the result summaries needed for reproduction.
+This repository is organized as a compact reproduction bundle: the primary training code, the main ablation scripts, five final 8B evaluation JSONs, and the summary analyses used in the write-up.
 
-The final method is a staged RL pipeline on `meta-llama/Llama-3.1-8B`: multi-task SFT, then IF-RLVR for instruction following, then GSM8K GRPO for math reasoning. The bundle also preserves two controls used in the analysis: cold-start GRPO from SFT, and the reverse-order math->IF pipeline.
-
-## Headline Results
+## Main Results
 
 | Run | IFEval | GSM8K | HumanEval | Avg |
 | --- | ---: | ---: | ---: | ---: |
@@ -16,14 +14,14 @@ The final method is a staged RL pipeline on `meta-llama/Llama-3.1-8B`: multi-tas
 | 8B forward final | 81.60 | 78.39 | 56.71 | 72.23 |
 | 8B reverse final | 83.58 | 77.10 | 56.71 | 72.46 |
 
-Main observations:
+Key findings:
 
 - The forward staged pipeline is the primary final method and remains the strongest math-heavy configuration in this bundle.
 - The reverse-order pipeline slightly wins on average and IFEval, showing that math-first then IF can recover instruction following surprisingly well.
 - Cold-start GRPO on 8B does improve over SFT, but it remains materially worse than the staged RL pipelines on alignment-sensitive behavior.
 - The 3B runs are retained as ablations and negative controls rather than as final methods.
 
-## Code Layout
+## Repository Layout
 
 - `code/train/`: final training code used for the main 8B pipeline.
 - `code/ablations/`: 3B screening and earlier multitask ablation code kept for citation and negative-result context.
@@ -32,7 +30,7 @@ Main observations:
 - `results/`: compact metrics, reverse-vs-forward comparison, and format-analysis outputs.
 - `checkpoints.md`: checkpoint provenance, stage configs, and 3B summary.
 
-## Reproduction
+## Quick Start
 
 Assumptions:
 
@@ -51,7 +49,7 @@ python prepare_data.py \
   --code_path /path/to/opencodeinstruct_train
 ```
 
-### 2. Run the primary forward pipeline
+### 2. Run the primary pipeline
 
 ```bash
 bash final/code/scripts/run_8b_forward.sh
@@ -82,6 +80,13 @@ Optional local snapshots can be supplied through CLI arguments or environment va
 
 No IFEval, GSM8K test, or HumanEval examples are used for training.
 
+## Additional Notes
+
+- `checkpoints.md` is the source of truth for checkpoint provenance.
+- `results/summary_metrics.json` is the source of truth for compact score reporting.
+- `results/format_analysis.csv`, `results/format_correct_vs_wrong.csv`, and `results/format_analysis_summary.md` are reproducible from `code/scripts/analyze_output_format.py`.
+- Two historical GRPO runs only preserve sampler checkpoints, not state checkpoints; this is documented explicitly in `checkpoints.md`.
+
 ## Citation Placeholder
 
 Placeholder BibTeX for camera-ready release:
@@ -98,10 +103,3 @@ Placeholder BibTeX for camera-ready release:
 ## Compute Budget
 
 All reported training runs were executed through Tinker-hosted jobs rather than local GPUs. A practical estimate for the 8B study in this bundle is about `$240` total cloud cost, counting the primary forward pipeline plus the cold-start and reverse-order controls and their associated full evaluations.
-
-## Sanity Notes
-
-- `checkpoints.md` is the source of truth for checkpoint provenance.
-- `results/summary_metrics.json` is the source of truth for compact score reporting.
-- `results/format_analysis.csv`, `results/format_correct_vs_wrong.csv`, and `results/format_analysis_summary.md` are reproducible from `code/scripts/analyze_output_format.py`.
-- Two historical GRPO runs only preserve sampler checkpoints, not state checkpoints; this is documented explicitly in `checkpoints.md`.
