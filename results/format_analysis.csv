@@ -1,0 +1,6 @@
+run,checkpoint_json,inspect_log,avg_words,avg_non_empty_lines,step_like_pct,numbered_step_pct,equation_pct,code_block_pct
+A. 8B SFT baseline,evaluation/submission_8b_sft_full.json,evaluation/inspect-logs/2026-04-20T23-05-43+00-00_task_GTm82dC9Xwmc2KjJ4iGDkw.eval,196.80,29.54,94.77,94.16,99.70,78.32
+B. 8B IF-RLVR-only,evaluation/submission_8b_if_rlvr.json,evaluation/inspect-logs/2026-04-20T23-37-53+00-00_task_C6rgsWqeiBU6HvVC7LYCH4.eval,124.77,14.82,64.52,64.29,98.64,18.42
+C. 8B Cold-start GRPO iter25,evaluation/submission_8b_coldstart_grpo_iter25.json,evaluation/inspect-logs/2026-04-30T22-26-38+00-00_task_iQ2aiQLET8oidXTTLMx76U.eval,83.03,8.07,3.79,3.34,99.92,0.23
+D. 8B Forward final,evaluation/submission_8b_final.json,evaluation/inspect-logs/2026-04-21T00-03-49+00-00_task_Fk5WdQvmrY2AANaR6z9xmu.eval,72.07,7.50,15.92,14.56,99.92,0.00
+E. 8B Reverse final,evaluation/submission_8b_reverse_iter40.json,evaluation/inspect-logs/2026-04-30T23-56-27+00-00_task_KjYfSS8rBpY8gdfUY6rvPe.eval,67.39,5.34,20.62,20.47,99.92,0.00
