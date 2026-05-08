@@ -9,8 +9,8 @@
 | 8B Reverse (math→IF) final | **83.58** | 77.10 | **56.71** | **72.46** |
 
 Files:
-- 8B SFT (baseline): evaluation/submission_8b_sft_full.json
-- 8B IF-RLVR-only: evaluation/submission_8b_if_rlvr.json
-- 8B Cold-start GRPO iter25: evaluation/submission_8b_coldstart_grpo_iter25.json
-- 8B Forward (IF→math) final: evaluation/submission_8b_final.json
-- 8B Reverse (math→IF) final: evaluation/submission_8b_reverse_iter40.json
+- 8B SFT (baseline): evaluation/8b_sft.json
+- 8B IF-RLVR-only: evaluation/8b_if_rlvr_only.json
+- 8B Cold-start GRPO best: evaluation/8b_coldstart_grpo_best.json
+- 8B Forward (IF→math) final: evaluation/8b_forward_final.json
+- 8B Reverse (math→IF) final: evaluation/8b_reverse_final.json

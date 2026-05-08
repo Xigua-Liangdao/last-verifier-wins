@@ -1,11 +1,13 @@
-run,outcome,sample_count,avg_words,avg_non_empty_lines,step_like_pct,numbered_step_pct,equation_pct,code_block_pct
-A. 8B SFT baseline,correct,768,184.89,28.06,93.75,93.75,99.48,72.14
-A. 8B SFT baseline,wrong,551,213.39,31.62,96.19,94.74,100.00,86.93
-B. 8B IF-RLVR-only,correct,863,107.89,12.18,57.71,58.17,98.49,8.00
-B. 8B IF-RLVR-only,wrong,456,156.72,19.81,77.41,75.88,98.90,38.16
-C. 8B Cold-start GRPO iter25,correct,1048,76.39,7.53,3.24,3.05,99.90,0.10
-C. 8B Cold-start GRPO iter25,wrong,271,108.69,10.16,5.90,4.43,100.00,0.74
-D. 8B Forward final,correct,1034,65.46,6.97,12.86,11.32,100.00,0.00
-D. 8B Forward final,wrong,285,96.04,9.41,27.02,26.32,99.65,0.00
-E. 8B Reverse final,correct,1017,62.18,5.04,17.50,17.31,100.00,0.00
-E. 8B Reverse final,wrong,302,84.92,6.37,31.13,31.13,99.67,0.00
+run,outcome,sample_count,avg_words,avg_non_empty_lines,step_like_pct,numbered_step_pct,equation_pct,code_block_pct,final_marker_pct
+8B SFT baseline,correct,768,184.89,28.06,93.75,93.75,99.48,72.14,64.45
+8B SFT baseline,wrong,551,213.39,31.62,96.19,94.74,100.00,86.93,82.94
+8B IF-RLVR-only,correct,863,107.89,12.18,57.71,58.17,98.49,8.00,2.90
+8B IF-RLVR-only,wrong,456,156.72,19.81,77.41,75.88,98.90,38.16,15.13
+8B Math-RLVR-only,correct,1048,76.39,7.53,3.24,3.05,99.90,0.10,0.00
+8B Math-RLVR-only,wrong,271,108.69,10.16,5.90,4.43,100.00,0.74,0.00
+8B Forward sequential final,correct,1034,65.46,6.97,12.86,11.32,100.00,0.00,0.00
+8B Forward sequential final,wrong,285,96.04,9.41,27.02,26.32,99.65,0.00,0.00
+8B Reverse sequential final,correct,1017,62.18,5.04,17.50,17.31,100.00,0.00,0.00
+8B Reverse sequential final,wrong,302,84.92,6.37,31.13,31.13,99.67,0.00,0.00
+8B Joint RL iter25,correct,1012,143.45,17.94,94.57,93.97,99.21,0.10,0.20
+8B Joint RL iter25,wrong,307,180.67,22.27,96.09,95.11,98.37,0.00,0.00

@@ -1,0 +1,17 @@
+datasets==4.8.4
+inspect-ai==0.3.170
+inspect-evals==0.3.106
+instruction-following-eval @ git+https://github.com/josejg/instruction_following_eval@0c495b2f95155e8b10acb919ae283bfb4d5be6e2
+jsonlines==4.0.0
+matplotlib>=3.7
+nltk==3.9.4
+numpy>=1.24
+pandas>=2.0
+requests>=2.31
+safetensors==0.7.0
+tinker==0.16.1
+tinker-cookbook @ git+https://github.com/thinking-machines-lab/tinker-cookbook.git@7cb5be22802a285558d30475a4dde1b86abe9c0c
+tokenizers==0.22.2
+torch==2.11.0
+tqdm>=4.66
+transformers==5.3.0

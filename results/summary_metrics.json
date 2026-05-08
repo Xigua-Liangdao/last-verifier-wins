@@ -1,135 +1,47 @@
 [
   {
-    "name": "8B SFT full",
-    "path": "evaluation/submission_8b_sft_full.json",
+    "name": "8B SFT baseline",
+    "path": "evaluation/8b_sft.json",
     "IFEval": 68.82,
     "GSM8K": 58.23,
     "HumanEval": 49.39,
     "Avg": 58.81
   },
   {
-    "name": "8B IF-RLVR",
-    "path": "evaluation/submission_8b_if_rlvr.json",
+    "name": "8B IF-RLVR only",
+    "path": "evaluation/8b_if_rlvr_only.json",
     "IFEval": 82.03,
     "GSM8K": 65.43,
     "HumanEval": 49.39,
     "Avg": 65.62
   },
   {
-    "name": "8B GRPO iter20",
-    "path": "evaluation/submission_8b_grpo_iter20.json",
-    "IFEval": 81.6,
-    "GSM8K": 78.32,
-    "HumanEval": 54.88,
-    "Avg": 71.6
-  },
-  {
-    "name": "8B GRPO iter25",
-    "path": "evaluation/submission_8b_final.json",
-    "IFEval": 81.6,
-    "GSM8K": 78.39,
-    "HumanEval": 56.71,
-    "Avg": 72.23
-  },
-  {
-    "name": "3B pipeline SFT",
-    "path": "evaluation/submission_pipeline3b_sft.json",
-    "IFEval": 57.06,
-    "GSM8K": 37.38,
-    "HumanEval": 35.98,
-    "Avg": 43.47
-  },
-  {
-    "name": "3B IF-RLVR v2",
-    "path": "evaluation/submission_v2_if_rlvr.json",
-    "IFEval": 73.9,
-    "GSM8K": 40.11,
-    "HumanEval": 30.49,
-    "Avg": 48.16
-  },
-  {
-    "name": "3B fresh GRPO",
-    "path": "evaluation/submission_grpo3b_fresh.json",
-    "IFEval": 23.65,
-    "GSM8K": 42.15,
-    "HumanEval": 0.61,
-    "Avg": 22.14
-  },
-  {
-    "name": "3B earlier SFT",
-    "path": "evaluation/submission_sft.json",
-    "IFEval": 57.64,
-    "GSM8K": 39.95,
-    "HumanEval": 37.8,
-    "Avg": 45.13
-  },
-  {
-    "name": "8B Cold-start GRPO iter5",
-    "path": "evaluation/submission_8b_coldstart_grpo_iter05.json",
-    "IFEval": 70.3,
-    "GSM8K": 75.74,
-    "HumanEval": 50.0,
-    "Avg": 65.35
-  },
-  {
-    "name": "8B Cold-start GRPO iter10",
-    "path": "evaluation/submission_8b_coldstart_grpo_iter10.json",
-    "IFEval": 72.32,
-    "GSM8K": 78.24,
-    "HumanEval": 50.61,
-    "Avg": 67.06
-  },
-  {
-    "name": "8B Cold-start GRPO iter15",
-    "path": "evaluation/submission_8b_coldstart_grpo_iter15.json",
-    "IFEval": 70.8,
-    "GSM8K": 77.26,
-    "HumanEval": 50.61,
-    "Avg": 66.22
-  },
-  {
-    "name": "8B Cold-start GRPO iter20",
-    "path": "evaluation/submission_8b_coldstart_grpo_iter20.json",
+    "name": "8B Math-RLVR only",
+    "path": "evaluation/8b_coldstart_grpo_best.json",
     "IFEval": 70.46,
     "GSM8K": 78.62,
     "HumanEval": 55.49,
     "Avg": 68.19
   },
   {
-    "name": "8B Cold-start GRPO iter25",
-    "path": "evaluation/submission_8b_coldstart_grpo_iter25.json",
-    "IFEval": 70.52,
-    "GSM8K": 79.45,
-    "HumanEval": 54.27,
-    "Avg": 68.08
-  },
-  {
-    "name": "8B Reverse (math\u2192IF) iter10",
-    "path": "evaluation/submission_8b_reverse_iter10.json",
-    "IFEval": 76.97,
-    "GSM8K": 79.23,
-    "HumanEval": 54.27,
-    "Avg": 70.16
-  },
-  {
-    "name": "8B Reverse (math\u2192IF) iter20",
-    "path": "evaluation/submission_8b_reverse_iter20.json",
-    "IFEval": 79.32,
+    "name": "8B Joint RL",
+    "path": "evaluation/8b_joint_rl_best.json",
+    "IFEval": 76.35,
     "GSM8K": 76.72,
     "HumanEval": 54.27,
-    "Avg": 70.1
+    "Avg": 69.11
   },
   {
-    "name": "8B Reverse (math\u2192IF) iter30",
-    "path": "evaluation/submission_8b_reverse_iter30.json",
-    "IFEval": 80.46,
-    "GSM8K": 76.65,
-    "HumanEval": 55.49,
-    "Avg": 70.87
+    "name": "8B Forward IF->Math",
+    "path": "evaluation/8b_forward_final.json",
+    "IFEval": 81.6,
+    "GSM8K": 78.39,
+    "HumanEval": 56.71,
+    "Avg": 72.23
   },
   {
-    "name": "8B Reverse (math\u2192IF) iter40",
-    "path": "evaluation/submission_8b_reverse_iter40.json",
+    "name": "8B Reverse Math->IF",
+    "path": "evaluation/8b_reverse_final.json",
     "IFEval": 83.58,
     "GSM8K": 77.1,
     "HumanEval": 56.71,
